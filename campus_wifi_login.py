@@ -124,8 +124,8 @@ if __name__ == "__main__":
         # 阶段 3: 校园网巡逻
         if check_internet():
             print(".", end="", flush=True) # 正常在线心跳
-            time.sleep(5)# 每 5 秒检测一次外网状态(可自行调整频率)
+            time.sleep(3)
         else:
             print(f"\n[{time.strftime('%H:%M:%S')}] 💔 信号丢失或被劫持，正在敲门...")
             do_login()
-            time.sleep(2)# 每两秒尝试一次登录，直到成功为止
+            time.sleep(2)
